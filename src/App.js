@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import React from "react";
+import Allposts from "./components/Allposts";
+import { Route,Routes } from "react-router-dom";
+import Eachpost from "./components/Eachpost";
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path="/F4-Module-Test/" element={<Allposts />} />
+        <Route path="/F4-Module-Test/item/:id" element={<Eachpost />} />
+      </Routes>
     </div>
   );
+ 
 }
 
 export default App;
